@@ -13,12 +13,12 @@ div {
 header {
 	display: flex;
 	align-items: center;
-	height: 3rem;
+	height: 4rem;
 	width: 100%;
 }
 
 header img {
-	height: 2.25rem;
+	height: 2.5rem;
 }
 
 .logo {
@@ -50,6 +50,25 @@ nav span {
 
 nav span:hover {
 	color: grey;
+}
+
+.mobile {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	display: none;
+}
+
+/* Responsive - Mobile Phone */
+
+@media only screen and (max-width:600px){
+	.mobile {
+		display: flex;
+	}
+	
+	header {
+		display: none;
+	}
 }
 
 /* Banner */
@@ -99,6 +118,25 @@ nav span:hover {
 
 .button:hover {
 	background-color: #ff7400;
+}
+
+@media only screen and (max-width:600px){
+	.banner {
+		flex-direction: column;
+	}
+	
+	.banner-image {
+		width: 100%;
+		padding: 0;
+	}
+	
+	.text-container {
+		width: 100%;	
+	}
+	
+	.banner-text h1 {
+		font-size: 2.5rem;
+	}
 }
 
 /* Main */
@@ -192,6 +230,49 @@ nav span:hover {
 	font-weight: 300;
 }
 
+.info-image-mobile {
+	display: none;
+}
+
+@media only screen and (max-width:600px){
+	.about .story {
+		display: none;
+	}
+	
+	.information {
+		width: auto;
+		margin: 1rem;
+	}
+		
+	.info-item {
+		flex-direction: column;
+		border: none;
+		align-items: center;	
+		width: 100%;
+	}
+	
+	.info-item:hover {
+		border: none;
+	}
+	
+	.info-image {
+		display: none;
+	}
+	
+	.info-image-mobile {
+		display: flex;
+		margin-bottom: 2rem;
+	}
+	
+	.info-image-mobile img {
+		width: 100%;
+	}
+	
+	.info-text {
+		width: 100%;
+	}
+}
+
 /* Courses */
 
 .learning {
@@ -253,10 +334,52 @@ nav span:hover {
 	color: #ff7400;
 }
 
+@media only screen and (max-width:600px){
+	.title h1 {
+		padding: 2rem 0rem 1rem 0rem;
+	}
+	.courses {
+		flex-direction: column;
+		width: auto;
+		margin: 1rem;
+	}
+	
+	.course {
+		width: auto;
+		margin: 0.5rem;
+	}
+	
+	.course-image {
+		display: none;
+	}
+	
+	.course-text p {
+		display: none;
+	}
+	
+	.course-text h2 {
+		margin: 1rem;
+	}
+}
+
 /* Exhibit */
 
 video {
 	width: 100%;
+}
+
+@media only screen and (max-width:600px){
+	.exhibit .story-text {
+		display: none;
+	}
+	
+	.exhibit .information {
+		display: none;
+	}
+	
+	.exhibit .story {
+		width: 100%;
+	}
 }
 
 /* Footer */
@@ -276,4 +399,10 @@ footer {
 
 .legal span {
 	padding: 0 0.5rem;
+}
+
+@media only screen and (max-width:600px) {
+	.legal {
+		display: none;
+	}
 }
